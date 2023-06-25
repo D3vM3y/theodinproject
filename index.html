@@ -4,17 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <form action="">
-        <!-- read the following article to understand forms -->
-        <!-- https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-form-basics -->
-        <!-- ask for title -->
-        <!-- ask for author -->
-        <!-- ask for pages -->
-        <!-- ask for read? -->
-        <input type="text">
+<!--
+https://pixabay.com/de/photos/b%C3%BCcher-buchhandlung-buchen-lesen-1204029/
+https://pixabay.com/de/photos/buchen-seiten-kapitel-offen-1283865/
+https://pixabay.com/de/photos/buchen-brille-beobachten-wissen-1052014/
+https://pixabay.com/de/photos/b%C3%BCcher-bibliothek-zimmer-schule-2596809/
+https://pixabay.com/de/photos/b%C3%BCcher-stapel-literatur-wissen-5937823/
+https://pixabay.com/de/photos/buchwand-b%C3%BCcher-mauer-dekorativ-1151405/
+currently using >> https://pixabay.com/de/vectors/lager-mond-abenteuer-reisen-nacht-7103189/ 
+-->
+<div class="grid-container">
+    <img src="https://cdn.pixabay.com/photo/2022/03/31/14/53/camp-7103189_1280.png" alt="">
+    <form action="" method="post">
+        <label for="title">Title</label>
+        <input id="title" type="text" name="title" placeholder="What's the books title?" required>
+        <label for="author">Author</label>
+        <input id="author" type="text" name="author" placeholder="Who is the author?" required>
+        <label for="pages">Pages</label>
+        <input id="pages" type="number" name="pages" min="1" placeholder="How many pages?" required>
+        <label for="read">Finished</label>
+        <input id="read" type="checkbox" name="finished" required>
+        <button type="submit">Upload</button>
     </form>
+</div>
+    
     <script src="libraryApp.js"></script>
 </body>
 </html>
