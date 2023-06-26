@@ -18,6 +18,13 @@ function addBookToLibrary() {
 
 function listLibraryBooks() {
     // loop through library and display all books in a list or on a card
+    myLibrary.map((book) => {
+        console.log(book);
+    })
+    // ul.createElement("li");
+    // li.createElement("h1");
+    // h1.textContent = "BookTitle";
+
 
 }
 
@@ -62,4 +69,9 @@ viewBooks.addEventListener("click", () => {
     displayElement(books)
     hideElement(form);
     hideElement(searchBook);
+})
+
+// load all books to the ul on pageload
+document.onload(()=>{
+    listLibraryBooks();
 })
