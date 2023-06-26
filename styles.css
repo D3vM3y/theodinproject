@@ -27,3 +27,7 @@ input {
 #read {
     width: auto;
 }
+
+.hideElement {
+    display: none;
+}

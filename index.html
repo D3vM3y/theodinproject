@@ -20,28 +20,25 @@ currently using >> https://pixabay.com/de/vectors/lager-mond-abenteuer-reisen-na
 -->
 <nav>
     <ul>
-        <li><a href="#">view books</a></li>
-        <li><a href="#">find book</a></li>
+        <li><a href="#" id="viewBooks">view books</a></li>
+        <li><a href="#" id="findBook">find book</a></li>
         <li><a href="#" id="newBookBtn">new book</a></li>
     </ul>
 </nav>
-<div id="contentContainer">
-
-</div>
-<!-- <div class="grid-container">
-    <img src="https://cdn.pixabay.com/photo/2022/03/31/14/53/camp-7103189_1280.png" alt="">
-    <form action="" method="post">
-        <label for="title">Title</label>
-        <input id="title" type="text" name="title" placeholder="What's the books title?" required>
-        <label for="author">Author</label>
-        <input id="author" type="text" name="author" placeholder="Who is the author?" required>
-        <label for="pages">Pages</label>
-        <input id="pages" type="number" name="pages" min="1" placeholder="How many pages?" required>
-        <label for="read">Finished</label>
-        <input id="read" type="checkbox" name="finished" required>
-        <button type="submit">Add book</button>
-    </form>
-</div> -->
+    <div id="form" class="hideElement grid-container">
+        <img src="https://cdn.pixabay.com/photo/2022/03/31/14/53/camp-7103189_1280.png" alt="">
+        <form action="" method="post">
+            <label for="title">Title</label>
+            <input id="title" type="text" name="title" placeholder="What's the books title?" required>
+            <label for="author">Author</label>
+            <input id="author" type="text" name="author" placeholder="Who is the author?" required>
+            <label for="pages">Pages</label>
+            <input id="pages" type="number" name="pages" min="1" placeholder="How many pages?" required>
+            <label for="read">Finished</label>
+            <input id="read" type="checkbox" name="finished" required>
+            <button type="submit">Add book</button>
+        </form>
+    </div>
     
     <script src="libraryApp.js"></script>
 </body>
