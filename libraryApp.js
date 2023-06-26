@@ -41,22 +41,25 @@ const findBook = document.querySelector("#findBook");
 
 // Webcontent 
 const form = document.querySelector("#form");
+const books = document.querySelector("#books");
+const searchBook = document.querySelector("#searchBook");
 
 
 //eventListeners for Navigation buttons
 newBookBtn.addEventListener("click", () => {
-    // form.classList.remove("hideElement");
     displayElement(form);
+    hideElement(books);
+    hideElement(searchBook);
 });
 
 findBook.addEventListener("click", () => {
-    // form.classList.add("hideElement");
+    displayElement(searchBook);
     hideElement(form);
+    hideElement(books);
 })
 
 viewBooks.addEventListener("click", () => {
-    // form.classList.add("hideElement");
+    displayElement(books)
     hideElement(form);
+    hideElement(searchBook);
 })
-
-console.log(form.classList);
