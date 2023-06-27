@@ -36,7 +36,7 @@ currently using >> https://pixabay.com/de/vectors/lager-mond-abenteuer-reisen-na
     </div>
     <div id="form" class="hideElement grid-container">
         <img src="https://cdn.pixabay.com/photo/2022/03/31/14/53/camp-7103189_1280.png" alt="">
-        <form action="" method="post">
+        <form id="submitBook" action="" method="post">
             <label for="title">Title</label>
             <input id="title" type="text" name="title" placeholder="What's the books title?" required>
             <label for="author">Author</label>
@@ -44,7 +44,7 @@ currently using >> https://pixabay.com/de/vectors/lager-mond-abenteuer-reisen-na
             <label for="pages">Pages</label>
             <input id="pages" type="number" name="pages" min="1" placeholder="How many pages?" required>
             <label for="read">Finished</label>
-            <input id="read" type="checkbox" name="finished" required>
+            <input id="read" type="checkbox" name="finished">
             <button type="submit">Add book</button>
         </form>
     </div>

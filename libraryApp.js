@@ -40,6 +40,7 @@ const form = document.querySelector("#form");
 const books = document.querySelector("#books");
 const searchBook = document.querySelector("#searchBook");
 const bookList = document.querySelector("#bookList");
+const submitBook = document.querySelector("#submitBook");
 
 
 //eventListeners for Navigation buttons
@@ -61,6 +62,11 @@ viewBooks.addEventListener("click", () => {
     hideElement(searchBook);
 })
 
+submitBook.addEventListener("submit", (newBook) => {
+    newBook.preventDefault();
+    addBookToLibrary(newBook);
+})
+
 
 function listLibraryBooks() {
     myLibrary.map((book) => {
@@ -71,8 +77,18 @@ function listLibraryBooks() {
 }
 
 
-function addBookToLibrary() {
-    
+
+function addBookToLibrary(newBook) {
+    // eventlistener for submit button
+    // on submit collect data
+    // const newBook = newBook;
+    // console.log(newBook.target.author);
+    const title = newBook.target.title.value;
+    const author = newBook.target.author.value;
+    const pages = newBook.target.pages.value;
+    const read = newBook.target.read.checked;
+
+    console.log(read);
 }
 
 function app() {
