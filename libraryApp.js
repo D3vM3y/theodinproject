@@ -57,6 +57,7 @@ findBook.addEventListener("click", () => {
 })
 
 viewBooks.addEventListener("click", () => {
+    listLibraryBooks();
     displayElement(books)
     hideElement(form);
     hideElement(searchBook);
@@ -69,6 +70,10 @@ submitBook.addEventListener("submit", (newBook) => {
 
 
 function listLibraryBooks() {
+    // clean the bookList before loading it
+    bookList.innerHTML = "";
+
+    // adding all books from myLibrary to the website
     myLibrary.map((book) => {
         const li = document.createElement("li");
         li.textContent = book.info();
@@ -79,16 +84,13 @@ function listLibraryBooks() {
 
 
 function addBookToLibrary(newBook) {
-    // eventlistener for submit button
-    // on submit collect data
-    // const newBook = newBook;
-    // console.log(newBook.target.author);
-    const title = newBook.target.title.value;
-    const author = newBook.target.author.value;
-    const pages = newBook.target.pages.value;
-    const read = newBook.target.read.checked;
-
-    console.log(read);
+    const bookInfo = newBook.target;
+    // const title = newBook.target.title.value;
+    // const author = newBook.target.author.value;
+    // const pages = newBook.target.pages.value;
+    // const read = newBook.target.read.checked;
+    const bookToAdd = new Book(bookInfo.title.value, bookInfo.author.value, bookInfo.pages.value, bookInfo.read.checked);
+    myLibrary.push(bookToAdd);
 }
 
 function app() {
