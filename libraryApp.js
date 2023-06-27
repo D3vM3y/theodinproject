@@ -4,28 +4,12 @@ function Book(title, author, pages, read){
     this.title = title,
     this.author = author,
     this.pages = pages,
-    this.read = read,   
+    this.read = read,
     this.info = function() {
         bookRead = read === true ? "read the book" : "not read yet";
         const infoString = `${title} by ${author}, ${pages}, ${bookRead}`;
         return infoString;
     }
-}
-
-function addBookToLibrary() {
-
-}
-
-function listLibraryBooks() {
-    // loop through library and display all books in a list or on a card
-    myLibrary.map((book) => {
-        console.log(book);
-    })
-    // ul.createElement("li");
-    // li.createElement("h1");
-    // h1.textContent = "BookTitle";
-
-
 }
 
 function displayElement(element) {
@@ -37,8 +21,13 @@ function hideElement(element) {
 }
 
 const firstBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
+const secondBook = new Book("Just Like You", "Nick Hornby", 506, true);  
+const thirdBook = new Book("Gutes Webdesign", "Someone", 608, true);
 
-console.log(firstBook.info());
+// placeholder. delete if page works
+myLibrary.push(firstBook);
+myLibrary.push(secondBook);
+myLibrary.push(thirdBook);
 
 // Navigation Buttons
 const newBookBtn = document.querySelector("#newBookBtn");
@@ -50,6 +39,7 @@ const findBook = document.querySelector("#findBook");
 const form = document.querySelector("#form");
 const books = document.querySelector("#books");
 const searchBook = document.querySelector("#searchBook");
+const bookList = document.querySelector("#bookList");
 
 
 //eventListeners for Navigation buttons
@@ -71,7 +61,22 @@ viewBooks.addEventListener("click", () => {
     hideElement(searchBook);
 })
 
-// load all books to the ul on pageload
-document.onload(()=>{
+
+function listLibraryBooks() {
+    myLibrary.map((book) => {
+        const li = document.createElement("li");
+        li.textContent = book.info();
+        bookList.append(li);
+    })
+}
+
+
+function addBookToLibrary() {
+    
+}
+
+function app() {
     listLibraryBooks();
-})
+}
+
+app();
