@@ -85,10 +85,6 @@ function listLibraryBooks() {
 
 function addBookToLibrary(newBook) {
     const bookInfo = newBook.target;
-    // const title = newBook.target.title.value;
-    // const author = newBook.target.author.value;
-    // const pages = newBook.target.pages.value;
-    // const read = newBook.target.read.checked;
     const bookToAdd = new Book(bookInfo.title.value, bookInfo.author.value, bookInfo.pages.value, bookInfo.read.checked);
     myLibrary.push(bookToAdd);
 }
