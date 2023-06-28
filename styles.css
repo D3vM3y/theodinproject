@@ -31,3 +31,11 @@ input {
 .hideElement {
     display: none;
 }
+
+/* === colors === */
+/* appbackground: FEFEFE */
+/* color-activeNavBtn: FFCA3C */
+/* color-btnBg: FFECB4 */
+/* color-finishedBook: 9CE5B0 */
+/* color-pageNum: F2402E */
+/* color-pages: 000000 >> 20%opacity*/
