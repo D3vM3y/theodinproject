@@ -1,3 +1,57 @@
+.appContainer {
+    width: 24.5625rem;
+    height: 53.25rem;
+    background: var(--color-app-bg, #FEFEFE);
+    box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 0.25);
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    overflow: hidden;
+}
+
+.verticalBanner {
+    width: 7.5rem;
+    height: 60rem;
+    flex-shrink: 0;
+}
+
+h1 {
+    /* display: flex; */
+    /* width: 13.8125rem; */
+    /* flex-direction: column; */
+    /* flex-shrink: 0; */
+    color: #7A2D25;
+    font-size: 2.1875rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #7A2D25;
+    font-size: 1.875rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+
+/* old salvage what is needed, delete the rest */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, auto);
