@@ -50,6 +50,23 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    border-bottom: 2px #FFCA3C solid;
+}
+
+.horizontal-divider {
+    width: 2.5rem;
+    height: 0.375rem;
+    border-radius: 6.25rem;
+    background: #772D24;
+    margin-top: 2.75rem;
+}
+
+
+
+
+
+
 
 /* old salvage what is needed, delete the rest */
 .grid-container {
