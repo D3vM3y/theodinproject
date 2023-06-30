@@ -9,20 +9,61 @@
 
 </head>
 <body>
-
-    <section class="appContainer">
-        <img class="verticalBanner" src="../Odin_Project/assets/imgs/banner_vertical.jpeg" alt="showing a banner consisting of multicolor ellipses">
+    <section id="landingPage" class="pageFrame vertical-grid">
+        <img class="verticalBanner" src="../Odin_Project/assets/imgs/banner_vertical.jpeg" alt="showing a vertical banner consisting of multicolor ellipses">
         <div>
             <div class="horizontal-divider"></div>
             <h1>book library</h1>
             <nav>
                 <ul>
-                    <li><a href="#" id="viewBooks">library</a></li>
+                    <li><a href="#" id="openLibrary">library</a></li>
                     <li><a href="#" id="newBookBtn">new book</a></li>
                     <li><a href="#" id="findBook">find book</a></li>
                 </ul>
             </nav>
         </div>
+    </section>
+
+    <!-- <section id="addBook" class="hideElement pageFrame horizontal-grid"> -->
+    <section id="addBook" class="hideElement pageFrame"> <!-- removed the horizontal grid because it is not needed-->
+        <div>
+            <!-- top section -->
+            <!-- <img class="horizontalBanner" src="../Odin_Project/assets/imgs/banner_vertical.jpeg" alt="showing a horizontal banner consisting of multicolor ellipses"> -->
+            <div>
+                <p>hey,</p>
+                <p>let's add a book!</p>
+            </div>
+            <div class="horizontal-divider"></div>
+        </div>
+        <div>
+            <!-- bottom section -->
+            <div id="form" class="grid-container">
+                <form id="submitBook" action="" method="post">
+                    <label for="title">what’s the books title?</label>
+                    <input id="title" type="text" name="title" placeholder="What's the books title?" required>
+                    <label for="author">who is the author?</label>
+                    <input id="author" type="text" name="author" placeholder="Who is the author?" required>
+                    <label for="pages">how many pages to read?</label>
+                    <input id="pages" type="number" name="pages" min="1" placeholder="How many pages?" required>
+                    <label for="read">did you read it already?</label>
+                    <input id="read" type="checkbox" name="finished">
+                    <label for="addCover">what’s the books cover?</label>
+                    <button id="addCover" name="addCover">
+                    <button type="submit">Add book</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <nav class="bottom-navbar">
+                <ul>
+                    <li><a href="#" id="openLibrary"><img class="nav-btn-ico" src="../Odin_Project/assets/icons/ico-libraryBtn.png" alt="library button"> library</a></li>
+                    <li><a href="#" id="newBookBtn"><img class="nav-btn-ico" src="../Odin_Project/assets/icons/ico-newBookBtn.png" alt="adding a new book button">new book</a></li>
+                    <li><a href="#" id="findBook"><img class="nav-btn-ico" src="../Odin_Project/assets/icons/ico-findBookBtn.png" alt="finding a book button">find book</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        
     </section>
 <!--
 https://pixabay.com/de/photos/b%C3%BCcher-buchhandlung-buchen-lesen-1204029/
@@ -50,20 +91,7 @@ currently using >> https://pixabay.com/de/vectors/lager-mond-abenteuer-reisen-na
     <div id="searchBook" class="hideElement">
         <h1>This section is used to display the find book form</h1>
     </div>
-    <div id="form" class="hideElement grid-container">
-        <img src="https://cdn.pixabay.com/photo/2022/03/31/14/53/camp-7103189_1280.png" alt="">
-        <form id="submitBook" action="" method="post">
-            <label for="title">Title</label>
-            <input id="title" type="text" name="title" placeholder="What's the books title?" required>
-            <label for="author">Author</label>
-            <input id="author" type="text" name="author" placeholder="Who is the author?" required>
-            <label for="pages">Pages</label>
-            <input id="pages" type="number" name="pages" min="1" placeholder="How many pages?" required>
-            <label for="read">Finished</label>
-            <input id="read" type="checkbox" name="finished">
-            <button type="submit">Add book</button>
-        </form>
-    </div>
+    
     
     <script src="libraryApp.js"></script>
 </body>

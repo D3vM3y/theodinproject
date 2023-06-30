@@ -31,11 +31,13 @@ myLibrary.push(thirdBook);
 
 // Navigation Buttons
 const newBookBtn = document.querySelector("#newBookBtn");
-const viewBooks = document.querySelector("#viewBooks");
+const openLibrary = document.querySelector("#openLibrary");
 const findBook = document.querySelector("#findBook");
 
 
 // Webcontent 
+const landingPage = document.querySelector("#landingPage");
+const addBookPage = document.querySelector("#addBook");
 const form = document.querySelector("#form");
 const books = document.querySelector("#books");
 const searchBook = document.querySelector("#searchBook");
@@ -45,9 +47,10 @@ const submitBook = document.querySelector("#submitBook");
 
 //eventListeners for Navigation buttons
 newBookBtn.addEventListener("click", () => {
-    displayElement(form);
-    hideElement(books);
-    hideElement(searchBook);
+    displayElement(addBookPage);
+    // hideElement(books);
+    // hideElement(searchBook);
+    hideElement(landingPage);
 });
 
 findBook.addEventListener("click", () => {

@@ -1,19 +1,35 @@
-.appContainer {
+.pageFrame {
     width: 24.5625rem;
     height: 53.25rem;
     background: var(--color-app-bg, #FEFEFE);
     box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 0.25);
     margin-left: auto;
     margin-right: auto;
-    display: grid;
-    grid-template-columns: 160px 1fr;
+    /* display: grid;
+    grid-template-columns: 160px 1fr; */
     overflow: hidden;
 }
+
+.vertical-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+}
+
+/* .horizontal-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 160px auto;
+} */
 
 .verticalBanner {
     width: 7.5rem;
     height: 60rem;
-    flex-shrink: 0;
+}
+
+.horizontalBanner {
+    width: 7.5rem;
+    height: 60rem;
+    transform: rotate(90deg);
 }
 
 h1 {
@@ -28,6 +44,41 @@ h1 {
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+}
+
+.bottom-navbar {
+    width: 24.5625rem;
+    height: 5rem;
+    background: #252525;
+}
+
+.bottom-navbar ul {
+    text-align: center;
+    line-height: 5rem;
+}
+
+.bottom-navbar li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.bottom-navbar a {
+    color: #FEFEFE;
+    text-align: center;
+    font-size: 0.9375rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-btn-ico {
+    width: 1.875rem;
+    height: 1.875rem;
 }
 
 ul {
