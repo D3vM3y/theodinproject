@@ -1,3 +1,15 @@
+:root {
+    --main-color: #1C7178;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1, a, p, button, input, label {
+    font: "Noto Sans";
+}
+
 .pageFrame {
     width: 24.5625rem;
     height: 53.25rem;
@@ -39,7 +51,6 @@ h1 {
     /* flex-shrink: 0; */
     color: #7A2D25;
     font-size: 2.1875rem;
-    font-family: Inter;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -66,7 +77,6 @@ h1 {
     color: #FEFEFE;
     text-align: center;
     font-size: 0.9375rem;
-    font-family: Inter;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -93,7 +103,6 @@ li {
 a {
     color: #7A2D25;
     font-size: 1.875rem;
-    font-family: Inter;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -110,10 +119,22 @@ a:hover {
     height: 0.375rem;
     border-radius: 6.25rem;
     background: #772D24;
-    /* margin-top: 2.75rem; */
+    margin-top: 2.75rem;
 }
 
 /* add book page styling */
+#addBook p {
+    text-transform: uppercase;
+}
+
+#addBook label{
+    text-transform: capitalize;
+}
+
+#addBook .horizontal-divider {
+    margin-top: 0;
+}
+
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -129,6 +150,44 @@ a:hover {
     margin-top: auto;
     margin-bottom: 0;
     padding: 0;
+}
+
+#addBook input {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 5px 10px;
+}
+
+#addBook input:active {
+    background-color: #fff;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+#addBook input::placeholder {
+    color: #fff;
+}
+
+#addBookCover {
+    border: none;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#submitBook-btn {
+    display: block;
+    margin: 60px auto;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--main-color);
+    color: #fff;
 }
 
 
