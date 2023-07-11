@@ -110,10 +110,26 @@ a:hover {
     height: 0.375rem;
     border-radius: 6.25rem;
     background: #772D24;
-    margin-top: 2.75rem;
+    /* margin-top: 2.75rem; */
+}
+
+/* add book page styling */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.flex-child {
+    padding: 0  36px;
 }
 
 
+.flex-child:nth-child(3) {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 0;
+}
 
 
 

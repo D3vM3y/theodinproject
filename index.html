@@ -25,17 +25,17 @@
     </section>
 
     <!-- <section id="addBook" class="hideElement pageFrame horizontal-grid"> -->
-    <section id="addBook" class="hideElement pageFrame"> <!-- removed the horizontal grid because it is not needed-->
+    <section id="addBook" class="hideElement pageFrame flex-container"> <!-- removed the horizontal grid because it is not needed-->
         <div>
             <!-- top section -->
             <!-- <img class="horizontalBanner" src="../Odin_Project/assets/imgs/banner_vertical.jpeg" alt="showing a horizontal banner consisting of multicolor ellipses"> -->
-            <div>
+            <div class="flex-child">
                 <p>hey,</p>
                 <p>let's add a book!</p>
+                <div class="horizontal-divider"></div>
             </div>
-            <div class="horizontal-divider"></div>
         </div>
-        <div>
+        <div class="flex-child">
             <!-- bottom section -->
             <div id="form" class="grid-container">
                 <form id="submitBook" action="" method="post">
@@ -53,7 +53,7 @@
                 </form>
             </div>
         </div>
-        <div>
+        <div class="flex-child">
             <nav class="bottom-navbar">
                 <ul>
                     <li><a href="#" id="openLibrary"><img class="nav-btn-ico" src="../Odin_Project/assets/icons/ico-libraryBtn.png" alt="library button"> library</a></li>
