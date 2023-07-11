@@ -7,6 +7,10 @@
 
     <link rel="stylesheet" href="styles.css">
 
+    <!-- website font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <section id="landingPage" class="pageFrame vertical-grid">
@@ -47,9 +51,9 @@
                     <input id="pages" type="number" name="pages" min="1" placeholder="How many pages?" required>
                     <label for="read">did you read it already?</label>
                     <input id="read" type="checkbox" name="finished">
-                    <label for="addCover">what’s the books cover?</label>
-                    <button id="addCover" name="addCover">
-                    <button type="submit">Add book</button>
+                    <label for="addBookCover">what’s the books cover?</label>
+                    <button id="addBookCover" name="addBookCover">+</button>
+                    <button id="submitBook-btn" type="submit">Add book</button>
                 </form>
             </div>
         </div>
