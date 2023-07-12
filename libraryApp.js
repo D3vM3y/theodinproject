@@ -1,5 +1,7 @@
+// array to store all the books
 let myLibrary = [];
 
+// book object to add or display a book
 function Book(title, author, pages, read){
     this.title = title,
     this.author = author,
@@ -12,6 +14,8 @@ function Book(title, author, pages, read){
     }
 }
 
+
+// helper functions to display or hide screen elements
 function displayElement(element) {
     element.classList.remove("hideElement");
 }
@@ -19,6 +23,20 @@ function displayElement(element) {
 function hideElement(element) {
     element.classList.add("hideElement");
 }
+
+
+// get page elements
+// Navigation Buttons
+// top nav
+const tn_displayLibraryBtn = document.querySelector("#tn-displayLibraryBtn");
+const tn_addBookBtn = document.querySelector("#tn-addBookBtn");
+const tn_findBookBtn = document.querySelector("#tn-findBookBtn");
+// bottom nav
+const bn_displayLibraryBtn = document.querySelector("#bn-displayLibraryBtn");
+const bn_addBookBtn = document.querySelector("#bn-addBookBtn");
+const bn_findBookBtn = document.querySelector("#bn-findBookBtn");
+
+
 
 const firstBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
 const secondBook = new Book("Just Like You", "Nick Hornby", 506, true);  
@@ -29,26 +47,24 @@ myLibrary.push(firstBook);
 myLibrary.push(secondBook);
 myLibrary.push(thirdBook);
 
-// Navigation Buttons
-const newBookBtn = document.querySelector("#newBookBtn");
-const openLibrary = document.querySelector("#openLibrary");
-const findBook = document.querySelector("#findBook");
+
 
 
 // Webcontent 
 const landingPage = document.querySelector("#landingPage");
-const addBookPage = document.querySelector("#addBook");
+const addBookScreen = document.querySelector("#addBook");
 const form = document.querySelector("#form");
 const books = document.querySelector("#books");
 const searchBook = document.querySelector("#searchBook");
 const bookList = document.querySelector("#bookList");
 const submitBook = document.querySelector("#submitBook");
+const displayLibraryScreen = document.querySelector("displayLibraryScreen");
 
 
 //eventListeners for Navigation buttons
 newBookBtn.addEventListener("click", () => {
-    displayElement(addBookPage);
-    // hideElement(books);
+    displayElement(addBookScreen);
+    hideElement(displayLibraryScreen);
     // hideElement(searchBook);
     hideElement(landingPage);
 });
@@ -57,12 +73,13 @@ findBook.addEventListener("click", () => {
     displayElement(searchBook);
     hideElement(form);
     hideElement(books);
+    hideElement(landingPage);
 })
 
-viewBooks.addEventListener("click", () => {
+displayLibraryBtn.addEventListener("click", () => {
     listLibraryBooks();
-    displayElement(books)
-    hideElement(form);
+    displayElement(displayLibraryScreen)
+    hideElement(addBookScreen);
     hideElement(searchBook);
 })
 
