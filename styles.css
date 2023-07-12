@@ -132,19 +132,19 @@ a:hover {
 }
 
 /* add book page styling */
-#addBook p {
+#addBookScreen p {
     text-transform: uppercase;
 }
 
-#addBook p:nth-child(2) {
+#addBookScreen p:nth-child(2) {
     font-weight: 800;
 }
 
-#addBook label{
+#addBookScreen label{
     text-transform: capitalize;
 }
 
-#addBook .horizontal-divider {
+#addBookScreen .horizontal-divider {
     margin-top: 0;
 }
 
@@ -165,11 +165,11 @@ a:hover {
     padding: 0;
 }
 
-#addBook input, #addBook button {
+#addBookScreen input, #addBookScreen button {
     box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.25);
 }
 
-#addBook input {
+#addBookScreen input {
     border: none;
     border-radius: 5px;
     background-color: var(--main-color);
@@ -177,13 +177,13 @@ a:hover {
     padding: 5px 10px;
 }
 
-#addBook input:active {
+#addBookScreen input:active {
     background-color: #fff;
     color: var(--main-color);
     border: 1px solid var(--main-color);
 }
 
-#addBook input::placeholder {
+#addBookScreen input::placeholder {
     color: #fff;
 }
 
