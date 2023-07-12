@@ -4,6 +4,9 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h1, a, p, button, input, label {
@@ -21,7 +24,7 @@ h1, a, p, button, input, label {
     margin-right: auto;
     /* display: grid;
     grid-template-columns: 160px 1fr; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .vertical-grid {

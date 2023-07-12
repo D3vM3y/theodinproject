@@ -20,32 +20,39 @@ function Book(title, author, pages, read){
 
 // get page elements
 // Navigation Buttons
-// top nav
+// navigation bars
 const displayLibraryBtn = document.querySelectorAll(".displayLibraryBtn");
 const addBookBtn = document.querySelectorAll(".addBookBtn");
-const findBookBtn = document.querySelectorAll(".findBookBtn");
-
-// const tn_displayLibraryBtn = document.querySelector("#tn-displayLibraryBtn");
-// const tn_addBookBtn = document.querySelector("#tn-addBookBtn");
-// const tn_findBookBtn = document.querySelector("#tn-findBookBtn");
-// bottom nav
-// const bn_displayLibraryBtn = document.querySelector("#bn-displayLibraryBtn");
-// const bn_addBookBtn = document.querySelector("#bn-addBookBtn");
-// const bn_findBookBtn = document.querySelector("#bn-findBookBtn");
+// const findBookBtn = document.querySelectorAll(".findBookBtn");
+const homeBtn = document.querySelectorAll(".homeBtn");
 
 // Get screens
+const bottomNav = document.querySelector("#bottomNav");
 const landingPageScreen = document.querySelector("#landingPageScreen");
 const displayLibraryScreen = document.querySelector("#displayLibraryScreen");
 const addBookScreen = document.querySelector("#addBookScreen");
 
 
 // Event Listeners
+homeBtn.forEach(element => {
+    element.addEventListener("click", () => {
+        hideElement(addBookScreen);
+        hideElement(displayLibraryScreen);
+        hideElement(bottomNav);
+        displayElement(landingPageScreen);
+        isHidden();
+    })
+})
+
 displayLibraryBtn.forEach(element => {
     element.addEventListener("click", () => {
         console.log("display library");
         hideElement(landingPageScreen);
         hideElement(addBookScreen);
+        hideElement(bottomNav);
         displayElement(displayLibraryScreen);
+        displayElement(bottomNav);
+        isHidden();
     })
 })
 
@@ -54,9 +61,25 @@ addBookBtn.forEach(element => {
         console.log("display add a book screen");
         hideElement(landingPageScreen);
         hideElement(displayLibraryScreen);
+        hideElement(bottomNav);
         displayElement(addBookScreen);
+        displayElement(bottomNav);
+        isHidden();
     })
 })
+
+// ===============
+// ===============
+// test function delete later
+function isHidden() {
+    if(bottomNav.classList === "hideElement"){
+        console.log("hidden");
+    }else {
+        console.log("not hidden");
+    }
+}
+// ===============
+// ===============
 
 
 // Functions

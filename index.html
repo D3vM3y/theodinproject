@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <section id="landingPageScreen" class="pageFrame vertical-grid">
+<body class="pageFrame">
+    <section id="landingPageScreen" class="vertical-grid">
         <img class="verticalBanner" src="../Odin_Project/assets/imgs/banner_vertical.jpeg" alt="showing a vertical banner consisting of multicolor ellipses">
         <div>
             <div class="horizontal-divider"></div>
@@ -28,7 +28,8 @@
         </div>
     </section>
 
-    <section id="displayLibraryScreen" class="hideElement pageFrame flex-container">
+    <!-- display library section -->
+    <section id="displayLibraryScreen" class="hideElement flex-container">
         <div>
             <!-- top section -->
             <div class="horizontalBanner">
@@ -55,8 +56,9 @@
         </div>
     </section>
 
-    <!-- <section id="addBook" class="hideElement pageFrame horizontal-grid"> -->
-    <section id="addBookScreen" class="hideElement pageFrame flex-container"> <!-- removed the horizontal grid because it is not needed-->
+    <!-- add book section -->
+    <!-- <section id="addBookScreen" class="hideElement pageFrame flex-container"> -->
+    <section id="addBookScreen" class="hideElement flex-container">
         <div>
             <!-- top section -->
             <div class="horizontalBanner">
@@ -86,37 +88,22 @@
                     <button id="submitBook-btn" type="submit">Add book</button>
                 </form>
             </div>
-        </div>
-        <div class="flex-child">
+        </div>        
+    </section>
+
+    <!-- bottom nav section -->
+    <section id="bottomNav" class="hideElement flex-container">
+        <div class="">
             <nav class="bottom-navbar">
                 <ul>
-                    <li><a href="#" id="bn-homeBtn"><img class="nav-btn-ico" src="../Odin_Project/assets/icons/ico-libraryBtn.png" alt="home button">home</a></li>
+                    <li><a href="#" id="bn-homeBtn"><img class="homeBtn nav-btn-ico" src="../Odin_Project/assets/icons/ico-libraryBtn.png" alt="home button">home</a></li>
                     <li><a href="#" id="bn-displayLibraryBtn" class="displayLibraryBtn"><img class="nav-btn-ico" src="../Odin_Project/assets/icons/ico-libraryBtn.png" alt="library button">library</a></li>
                     <li><a href="#" id="bn-addBookBtn"><img class="addBookBtn nav-btn-ico" src="../Odin_Project/assets/icons/ico-newBookBtn.png" alt="adding a new book button">new book</a></li>
                     <li><a href="#" id="bn-findBookBtn"><img class="findBookBtn nav-btn-ico" src="../Odin_Project/assets/icons/ico-findBookBtn.png" alt="finding a book button">find book</a></li>
                 </ul>
             </nav>
         </div>
-        
-        
     </section>
-<!--
-https://pixabay.com/de/photos/b%C3%BCcher-buchhandlung-buchen-lesen-1204029/
-https://pixabay.com/de/photos/buchen-seiten-kapitel-offen-1283865/
-https://pixabay.com/de/photos/buchen-brille-beobachten-wissen-1052014/
-https://pixabay.com/de/photos/b%C3%BCcher-bibliothek-zimmer-schule-2596809/
-https://pixabay.com/de/photos/b%C3%BCcher-stapel-literatur-wissen-5937823/
-https://pixabay.com/de/photos/buchwand-b%C3%BCcher-mauer-dekorativ-1151405/
-currently using >> https://pixabay.com/de/vectors/lager-mond-abenteuer-reisen-nacht-7103189/ 
--->
-<!-- <nav>
-    <ul>
-        <li><a href="#" id="viewBooks">view books</a></li>
-        <li><a href="#" id="findBook">find book</a></li>
-        <li><a href="#" id="newBookBtn">new book</a></li>
-    </ul>
-</nav>
--->
     
     
     
