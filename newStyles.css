@@ -43,3 +43,45 @@ body {
     grid-template-columns: 160px 1fr; */
     /* overflow: hidden; */
 }
+
+/* book card styling */
+.bookList {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.bookCard {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+    list-style: none;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 5px 10px;
+}
+
+.bookCover {
+    width: 100px;
+    height: 150px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.bookInfo h2, .bookInfo h3 {
+    margin: 0;
+}
+
+.bookInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bookInfo div {
+
+}
