@@ -1,5 +1,5 @@
 const content = document.querySelector("#contentSection");
-const bottomNav = document.querySelector("#bottomNav");
+const mainNav = document.querySelector("#mainNav");
 
 const homeBtn = document.querySelector(".homeBtn");
 const libraryBtn = document.querySelector(".libraryBtn");
