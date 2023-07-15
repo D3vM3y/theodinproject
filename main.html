@@ -6,27 +6,48 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="newStyles.css">
+
+    <!--===== icons =====-->
+    <!-- delete icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- home button -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- library button -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- new book button -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- book to read icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- book read icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
 </head>
 <body class="pageFrame">
     <div class="sidebar">
         <section class="scroll-box">
+            <div class="welcome-note">
+                <div class="banner"></div>
+                <span>hello,</span>
+                <span>username</span>
+                <div class="horizontalDivider"></div>
+            </div>
             <ul class="bookList">
                 <li class="bookCard">
-                    <div class="bookCover">
-                        <img src="" alt="book cover">
+                    <div>
+                        <img class="bookCover" src="https://m.media-amazon.com/images/I/71GFfaWbcZL._SY522_.jpg" alt="book cover">
                     </div>
                     <div class="bookInfo">
-                        <div>
+                        <div class="author-and-title">
                             <h2>book title</h2>
                             <h3>book author</h3>
                         </div>
-                        <div>
+                        <div class="book-pages">
                             <span>999</span>
                             <span>pages</span>
                         </div>
                         <div>
-                            <button>&Chi;</button>
-                            <button>&radic;</button>
+                            <button class="delete-btn book-btn"><span class="material-symbols-outlined">delete</span></button>
+                            <button class="read-btn book-btn"><!--<span class="material-symbols-outlined">done</span>--><span class="material-symbols-outlined">auto_stories</span></button>
                         </div>
                     </div>
                 </li>
@@ -44,8 +65,8 @@
                             <span>pages</span>
                         </div>
                         <div>
-                            <button>&Chi;</button>
-                            <button>&radic;</button>
+                            <button><span class="material-symbols-outlined">delete</span></button>
+                            <button><span class="material-symbols-outlined">done</span></button>
                         </div>
                     </div>
                 </li>
@@ -63,8 +84,8 @@
                             <span>pages</span>
                         </div>
                         <div>
-                            <button>&Chi;</button>
-                            <button>&radic;</button>
+                            <button><span class="material-symbols-outlined">delete</span></button>
+                            <button><span class="material-symbols-outlined">done</span></button>
                         </div>
                     </div>
                 </li>
@@ -82,8 +103,8 @@
                             <span>pages</span>
                         </div>
                         <div>
-                            <button>&Chi;</button>
-                            <button>&radic;</button>
+                            <button><span class="material-symbols-outlined">delete</span></button>
+                            <button><span class="material-symbols-outlined">done</span></button>
                         </div>
                     </div>
                 </li>
@@ -101,21 +122,41 @@
                             <span>pages</span>
                         </div>
                         <div>
-                            <button>&Chi;</button>
-                            <button>&radic;</button>
+                            <button><span class="material-symbols-outlined">delete</span></button>
+                            <button><span class="material-symbols-outlined">done</span></button>
+                        </div>
+                    </div>
+                </li>
+                <li class="bookCard">
+                    <div class="bookCover">
+                        <img src="" alt="book cover">
+                    </div>
+                    <div class="bookInfo">
+                        <div>
+                            <h2>book title</h2>
+                            <h3>book author</h3>
+                        </div>
+                        <div>
+                            <span>999</span>
+                            <span>pages</span>
+                        </div>
+                        <div>
+                            <button><span class="material-symbols-outlined">delete</span></button>
+                            <button><span class="material-symbols-outlined">done</span></button>
                         </div>
                     </div>
                 </li>
             </ul>
         </section>
-        <section class="navbar">
-            <ul>
-                <li>home</li>
-                <li>library</li>
-                <li>add book</li>
-            </ul>
-        </section>
+        
     </div>
+    <section class="navbar">
+        <ul>
+            <li><span class="material-symbols-outlined">home</span>home</li>
+            <li><span class="material-symbols-outlined">menu_book</span>library</li>
+            <li><span class="material-symbols-outlined">add_notes</span>new book</li>
+        </ul>
+    </section>
     <!-- <section id="contentSection">
         <div id="content-container">
             <h1>Book Library</h1>

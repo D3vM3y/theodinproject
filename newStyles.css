@@ -2,6 +2,8 @@
 body {
     letter-spacing: 2px;
 }
+
+/* ========================================== */
 /* navbar styling */
 #mainNav {
     /* position: absolute; */
@@ -20,7 +22,35 @@ body {
 } */
 
 .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(33, 33, 33);
+    position: sticky;
+    top: 100%;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    gap: 60px;
     list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li:hover {
+    color:  #FFCA3C;
 }
 
 .navbar a {
@@ -40,19 +70,60 @@ body {
     position: sticky;
 }
 
+
+
+/* ========================================== */
 /* page styling */
 .pageFrame {
     width: 24.5625rem;
-    height: 53.25rem;
+    height: 95vh;
     background: var(--color-app-bg, #FEFEFE);
     box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 0.25);
     margin-left: auto;
     margin-right: auto;
 }
 
-/* content container section styling */
-#content-container {
-    /* overflow: hidden; */
+.sidebar {
+    background-color: fff;
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    overflow: scroll;
+    position: fixed;
+    overflow: scroll;
+}
+
+.scroll-box {
+    height: inherit;
+}
+
+
+/* ========================================== */
+/* content section styling */
+.banner {
+    height: 60px;
+    background-color: #1C7178;
+}
+
+.welcome-note span {
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.welcome-note :nth-child(3) {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.horizontalDivider {
+    margin-left: 10px;
+    width: 2.5rem;
+    height: 0.375rem;
+    background: #1C7178;
+    border-radius: 6.25rem;
 }
 
 /* book card styling */
@@ -69,18 +140,24 @@ body {
     grid-template-columns: auto 1fr;
     grid-gap: 20px;
     list-style: none;
-    border: solid 2px black;
+    /* border: solid 2px black; */
     border-radius: 10px;
-    background-color: antiquewhite;
+    background-color: #fff;
     padding: 10px;
     margin: 5px 10px;
+    filter: drop-shadow(4px 3px 5px rgba(0, 0, 0, 0.25));
+}
+
+.bookCard:last-child {
+    margin-bottom: 100px;
 }
 
 .bookCover {
     width: 100px;
     height: 150px;
-    border: 1px black solid;
     border-radius: 5px;
+    background-color: #1C7178;
+    color: #fff;
 }
 
 .bookInfo h2, .bookInfo h3 {
@@ -93,42 +170,62 @@ body {
     justify-content: space-between;
 }
 
-.bookInfo div {
-
+.author-and-title h2 {
+    font-weight: bolder;
+    font-size: 25px;
+    text-transform: capitalize;
 }
 
-
-
-
-.sidebar {
-    background-color: fff;
-    width: inherit;
-    height: inherit;
-    position: fixed;
-    overflow: scroll;
-    position: fixed;
-    overflow: scroll;
+.author-and-title h3 {
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: capitalize;
 }
 
-.scroll-box {
-    
+/* icon styling */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+.book-pages span:first-child {
+    color: #F2402E;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.navbar {
-    background-color: rgb(33, 33, 33);
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    color: white;
+.book-pages span:nth-child(2) {
+    color: #000000;
+    opacity: 30%;
+    font-weight: semi-bold;
+    font-size: 16px;
 }
 
-.navbar ul {
-    display: flex;
-    justify-content: space-around;
-    align-content: space-around;
-    gap: 5px;
-    list-style: none;
-    padding: 0;
+.book-btn {
+    color: #4D4D4D;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    line-height: 11px;
 }
 
+.delete-btn {
+    background: #D2D2D2;
+}
+
+.delete-btn:hover {
+    background-color: #F2402E;
+    color: #fff;
+}
+
+.read-btn {
+    background:#FFCA3C;
+}
+
+.book-read-btn, .read-btn:hover {
+    background: #9CE5B0;
+}
