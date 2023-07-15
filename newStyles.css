@@ -1,0 +1,33 @@
+/* general styling */
+body {
+    letter-spacing: 2px;
+}
+/* navbar styling */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    gap: 5px;
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #FFCA3C solid;
+    font-weight: 600;
+}
+
+.horizontalBar {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
