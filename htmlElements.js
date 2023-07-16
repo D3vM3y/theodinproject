@@ -1,3 +1,31 @@
+// library
+let library = [
+    {
+        title: "a game of thrones",
+        author: "George R. R. Martin",
+        pages: 694,
+        cover: "https://m.media-amazon.com/images/I/51RbpshZ-LL._SY445_SX342_.jpg",
+        read: false,
+    },
+    {
+        title: "just like you",
+        author: "nick hornby",
+        pages: 294,
+        cover: "https://m.media-amazon.com/images/I/71GFfaWbcZL._SY522_.jpg",
+        read: false,
+    }
+];
+
+// book object
+function book(title, author, pages, cover, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.cover = cover;
+    this.read = read;
+}
+
+
 const content = document.querySelector("#contentSection");
 const navbar = document.querySelector(".navbar");
 
