@@ -33,14 +33,6 @@ body {
     color: white;
 }
 
-.homeNavbar {
-    
-}
-
-.homeNavbar ul{
-    flex-direction: column;
-}
-
 .navbar ul {
     display: flex;
     justify-content: space-around;
@@ -76,6 +68,40 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     position: sticky;
+}
+
+/* navbar for the home screen */
+.homeNavbar {
+    position: absolute;
+    width: auto;
+    height: auto;
+    bottom: auto;
+    top: 200px;
+    left: 300px;
+    color: inherit;
+    background: none;
+}
+
+.homeNavbar > ul{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.homeNavbar ul li {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.homeNavbar ul li:hover {
+    color: inherit;
+    font-weight: bold;
+}
+
+.homeNavbar ul li:hover > span {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #FFCA3C;
 }
 
 

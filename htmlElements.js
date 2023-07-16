@@ -1,5 +1,5 @@
 const content = document.querySelector("#contentSection");
-const mainNav = document.querySelector("#mainNav");
+const navbar = document.querySelector(".navbar");
 
 const homeBtn = document.querySelector(".homeBtn");
 // const libraryBtn = document.querySelector(".libraryBtn");
@@ -22,6 +22,7 @@ const bookBtns = document.querySelectorAll(".read-btn");
 homeBtn.addEventListener("click", () => {
     const contentContainer = document.querySelector("#contentContainer");
     loadPage(contentContainer, homeScreen);
+    navbar.classList.add("homeNavbar");
 })
 
 function loadPage(target, contentToLoad) {
