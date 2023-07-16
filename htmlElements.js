@@ -2,12 +2,12 @@ const content = document.querySelector("#contentSection");
 const navbar = document.querySelector(".navbar");
 
 const homeBtn = document.querySelector(".homeBtn");
-// const libraryBtn = document.querySelector(".libraryBtn");
+const libraryBtn = document.querySelector(".libraryBtn");
 // const newBookBtn = document.querySelector(".newBookBtn");
 
 // provided html element structure for the content section
 // const newBookForm = "<div id='form' class='grid-container'><form id='submitBook' action='' method='post'><label for='title'>what’s the books title?</label><input id='title' type='text' name='title' placeholder='What's the books title?' required><label for='author'>who is the author?</label><input id='author' type='text' name='author' placeholder='Who is the author?' required><label for='pages'>how many pages to read?</label><input id='pages' type='number' name='pages' min='1' placeholder='How many pages?' required><label for='read'>did you read it already?</label><input id='read' type='checkbox' name='finished'><label for='addBookCover'>what’s the books cover?</label><button id='addBookCover' name='addBookCover'>+</button><button id='submitBook-btn' type='submit'>Add book</button></form></div>";
-// const libraryList = "<ul class='bookList'><li class='bookCard'>book1</li><li class='bookCard'>book2</li><li class='bookCard'>book3</li></ul>";
+const libraryList = "<ul class='bookList'><li class='bookCard'>book1</li><li class='bookCard'>book2</li><li class='bookCard'>book3</li></ul>";
 const homeScreen = "<div class='welcome-note'><div class='banner'></div><span>hello,</span><span>username</span><div class='horizontalDivider'></div></div>";
 const scrollBox = document.querySelector(".scroll-box");
 
@@ -25,32 +25,16 @@ homeBtn.addEventListener("click", () => {
     navbar.classList.add("homeNavbar");
 })
 
-function loadPage(target, contentToLoad) {
-    // remove current content inside the scroll-box
-    removeContent(target);
+libraryBtn.addEventListener("click", () => {
+    const contentContainer = document.querySelector("#contentContainer");
+    loadPage(contentContainer, libraryList);
+    navbar.classList.remove("homeNavbar");
+})
 
-    // load content related to clicked button
-    loadContent(target, contentToLoad);
-}
 
-function loadContent(target, contentToLoad) {
-    const newContent = document.createElement("div");
-    newContent.setAttribute("id", "contentContainer");
-    newContent.innerHTML = contentToLoad;
-    scrollBox.append(newContent);
-
-}
-
-function removeContent(contentToRemove) {
-    contentToRemove.remove();
-}
 
 // newBookBtn.addEventListener("click", () => {
 //     changeContent(newBookForm);
-// })
-
-// libraryBtn.addEventListener("click", () => {
-//     changeContent(libraryList);
 // })
 
 bookBtns.forEach(btn => {
@@ -72,6 +56,27 @@ bookBtns.forEach(btn => {
     })
 });
 
+
+// helper functions 
+function loadPage(target, contentToLoad) {
+    // remove current content inside the scroll-box
+    removeContent(target);
+
+    // load content related to clicked button
+    loadContent(target, contentToLoad);
+}
+
+function loadContent(target, contentToLoad) {
+    const newContent = document.createElement("div");
+    newContent.setAttribute("id", "contentContainer");
+    newContent.innerHTML = contentToLoad;
+    scrollBox.append(newContent);
+
+}
+
+function removeContent(contentToRemove) {
+    contentToRemove.remove();
+}
 
 
 // // function appendElements(element, innerHTML) {
