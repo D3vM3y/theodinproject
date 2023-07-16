@@ -10,6 +10,9 @@ const newBookForm = "<div id='form' class='grid-container'><form id='submitBook'
 const libraryList = "<ul class='bookList'><li class='bookCard'>book1</li><li class='bookCard'>book2</li><li class='bookCard'>book3</li></ul>";
 const homeScreen = "<h1>Home</h1>";
 
+// book card btns
+const bookBtns = document.querySelectorAll(".read-btn");
+
 
 // Event Listeners
 homeBtn.addEventListener("click", () => {
@@ -23,6 +26,41 @@ newBookBtn.addEventListener("click", () => {
 libraryBtn.addEventListener("click", () => {
     changeContent(libraryList);
 })
+
+bookBtns.forEach(btn => {
+    btn.addEventListener("click", (event) => {
+        // on click change icon and color
+        if(btn.classList.contains("done")){
+            console.log("yellow");
+            btn.classList.remove("done");
+            btn.removeChild(btn.firstChild);
+            btn.innerHTML = "<span class='material-symbols-outlined'>auto_stories</span>";
+            btn.setAttribute("style", "background-color: #FFCA3C;");
+        }else {
+            console.log("green");
+            btn.classList.add("done")
+            btn.removeChild(btn.firstChild);
+            btn.innerHTML = "<span class='material-symbols-outlined'>done</span>";
+            btn.setAttribute("style", "background-color: #9CE5B0;");
+        }
+
+        // if(btn.getAttribute("style") != "background-color: #9CE5B0"){
+        //     console.log("change to green");
+        //     btn.removeChild(btn.firstChild);
+        //     btn.innerHTML = "<span class='material-symbols-outlined'>done</span>";
+        //     btn.setAttribute("style", "background-color: #9CE5B0;");
+        // }else {
+        //     console.log("change to yellow");
+        //     btn.removeChild(btn.firstChild);
+        //     btn.innerHTML = "<span class='material-symbols-outlined'>auto_stories</span>";
+        //     btn.setAttribute("style", "background-color: #FFCA3C;");
+            
+        // }
+        
+    })
+});
+
+
 
 // function appendElements(element, innerHTML) {
 function appendElements(contentToAdd) {
