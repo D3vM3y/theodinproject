@@ -1,4 +1,8 @@
 /* general styling */
+:root {
+    --main-color: #1C7178;
+}
+
 body {
     letter-spacing: 2px;
 }
@@ -70,7 +74,7 @@ body {
     position: sticky;
 }
 
-/* navbar for the home screen */
+/* navbar styling for the home screen */
 .homeNavbar {
     width: auto;
     margin-bottom: 350px;
@@ -261,4 +265,52 @@ body {
 
 .book-read-btn, .read-btn:hover {
     background: #9CE5B0;
+}
+
+/* add book form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+label, input {
+    display: block;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+input {
+    margin-bottom: 20px;
+    height: 20px;
+    width: 300px;
+}
+
+input:checked {
+    background-color: var(--main-color);
+    color: #fff;
+    text-decoration: none;
+}
+
+#read {
+    width: 25px;
+    height: 25px;
+}
+
+#submitBook-btn {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--main-color);
+    color: #fff;
 }
