@@ -48,18 +48,15 @@ const bookBtns = document.querySelectorAll(".read-btn");
 // Event Listeners
 homeBtn.addEventListener("click", () => {
     const contentContainer = document.querySelector("#contentContainer");
-    loadPage(contentContainer, homeScreen);
+    // loadPage(contentContainer, homeScreen);
+    createContentContainer(homeScreen);
     navbar.classList.add("homeNavbar");
 })
 
 libraryBtn.addEventListener("click", () => {
     const contentContainer = document.querySelector("#contentContainer");
-    loadPage(contentContainer, createLibrary(library));
-    // create ul
-    // create li elements
-    // append ul with lis to contentContainer
-
-
+    // loadPage(contentContainer, createLibrary());
+    createContentContainer(createLibrary());
     navbar.classList.remove("homeNavbar");
 })
 
@@ -89,49 +86,51 @@ bookBtns.forEach(btn => {
 });
 
 
-// helper functions 
-function loadPage(target, contentToLoad) {
-    // remove current content inside the scroll-box
-    removeContent(target);
 
-    // load content related to clicked button
-    // loadContent(target, contentToLoad);
-    loadContent(contentToLoad);
-}
 
-// function loadContent(target, contentToLoad) {
-function loadContent(contentToLoad) {
-    const newContent = document.createElement("div");
-    newContent.setAttribute("id", "contentContainer");
-    newContent.innerHTML = contentToLoad;
-    scrollBox.append(newContent);
 
-}
 
-function removeContent(contentToRemove) {
-    contentToRemove.remove();
-}
-
-function createLibrary(library) {
-    // const bookCover = "https://m.media-amazon.com/images/I/71GFfaWbcZL._SY522_.jpg";
-    // const author = "Joe";
-    // const title = "The test book";
-    // const pages = 203;
-    // const read = false;
-
-    // for each book in library create a book card
-    // title, author, cover, pages, read
-    library.forEach(book => {
-        if(book.read === true){
-            return '<li class="bookCard"><div><img class="bookCover" src='+book.cover+' alt="book cover"></div><div class="bookInfo"><div class="author-and-title"><h2>'+book.title+'</h2><h3>'+book.author+'</h3></div><div class="book-pages"><span>'+book.pages+'</span><span>pages</span></div><div><button class="delete-btn book-btn"><span class="material-symbols-outlined">delete</span></button><button class="read-btn book-btn"><span class="material-symbols-outlined">done</span></button></div></div></li>';
-        }else {
-            return '<li class="bookCard"><div><img class="bookCover" src='+book.cover+' alt="book cover"></div><div class="bookInfo"><div class="author-and-title"><h2>'+book.title+'</h2><h3>'+book.author+'</h3></div><div class="book-pages"><span>'+book.pages+'</span><span>pages</span></div><div><button class="delete-btn book-btn"><span class="material-symbols-outlined">delete</span></button><button class="read-btn book-btn"><span class="material-symbols-outlined">done</span></button></div></div></li>';
-        }
-    })
-}
-
+// ======================================================
+// ======================================================
+// new functions 
+// ======================================================
+// ======================================================
 // on page load, load starting screen aka home screen
 window.onload = () => {
-    loadPage(contentContainer, homeScreen);
+    createContentContainer(homeScreen);
     navbar.classList.add("homeNavbar");
+}
+
+// create contentContainer div
+function createContentContainer(contentToLoad){
+    clearContent(contentContainer);
+    const newContent = document.createElement("div");
+    newContent.setAttribute("id", "contentContainer");
+    newContent.innerHTML = appendContent(contentToLoad);
+    scrollBox.append(newContent);
+};
+// append custom content to div
+function appendContent(screenToLoad) {
+    return screenToLoad;
+};
+
+function clearContent(contentToRemove){
+    contentToRemove.remove();
+};
+
+
+function createLibrary(){
+    let liElements = "";
+
+    for(i=0; i<library.length; i++) {
+        if(library.read === true){
+            let liElem = '<li class="bookCard"><div><img class="bookCover" src='+library[i].cover+' alt="book cover"></div><div class="bookInfo"><div class="author-and-title"><h2>'+library[i].title+'</h2><h3>'+library[i].author+'</h3></div><div class="book-pages"><span>'+library[i].pages+'</span><span>pages</span></div><div><button class="delete-btn book-btn"><span class="material-symbols-outlined">delete</span></button><button class="read-btn book-btn"><span class="material-symbols-outlined">done</span></button></div></div></li>';
+            liElements += liElem;
+        }else {
+            let liElem = '<li class="bookCard"><div><img class="bookCover" src='+library[i].cover+' alt="book cover"></div><div class="bookInfo"><div class="author-and-title"><h2>'+library[i].title+'</h2><h3>'+library[i].author+'</h3></div><div class="book-pages"><span>'+library[i].pages+'</span><span>pages</span></div><div><button class="delete-btn book-btn"><span class="material-symbols-outlined">delete</span></button><button class="read-btn book-btn"><span class="material-symbols-outlined">auto_stories</span></button></div></div></li>';
+            liElements += liElem;
+        }
+    }
+
+    return '<ul class="bookList">' + liElements + '</ul>';
 }
