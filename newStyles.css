@@ -72,14 +72,13 @@ body {
 
 /* navbar for the home screen */
 .homeNavbar {
-    position: absolute;
     width: auto;
+    margin-bottom: 350px;
     height: auto;
-    bottom: auto;
-    top: 200px;
-    left: 300px;
     color: inherit;
     background: none;
+    margin-left: 40px;
+    float: left;
 }
 
 .homeNavbar > ul{

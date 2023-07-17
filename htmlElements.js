@@ -25,7 +25,6 @@ function book(title, author, pages, cover, read) {
     this.read = read;
 }
 
-
 const content = document.querySelector("#contentSection");
 const navbar = document.querySelector(".navbar");
 
@@ -35,10 +34,10 @@ const libraryBtn = document.querySelector(".libraryBtn");
 
 // provided html element structure for the content section
 // const newBookForm = "<div id='form' class='grid-container'><form id='submitBook' action='' method='post'><label for='title'>what’s the books title?</label><input id='title' type='text' name='title' placeholder='What's the books title?' required><label for='author'>who is the author?</label><input id='author' type='text' name='author' placeholder='Who is the author?' required><label for='pages'>how many pages to read?</label><input id='pages' type='number' name='pages' min='1' placeholder='How many pages?' required><label for='read'>did you read it already?</label><input id='read' type='checkbox' name='finished'><label for='addBookCover'>what’s the books cover?</label><button id='addBookCover' name='addBookCover'>+</button><button id='submitBook-btn' type='submit'>Add book</button></form></div>";
-const libraryList = "<ul class='bookList'><li class='bookCard'>book1</li><li class='bookCard'>book2</li><li class='bookCard'>book3</li></ul>";
+// const libraryList = "<ul class='bookList'><li class='bookCard'>book1</li><li class='bookCard'>book2</li><li class='bookCard'>book3</li></ul>";
 const homeScreen = "<div class='welcome-note'><div class='banner'></div><span>hello,</span><span>username</span><div class='horizontalDivider'></div></div>";
 const scrollBox = document.querySelector(".scroll-box");
-
+// const contentContainer = document.querySelector("#contentContainer");
 
 
 
@@ -55,7 +54,12 @@ homeBtn.addEventListener("click", () => {
 
 libraryBtn.addEventListener("click", () => {
     const contentContainer = document.querySelector("#contentContainer");
-    loadPage(contentContainer, libraryList);
+    loadPage(contentContainer, createLibrary(library));
+    // create ul
+    // create li elements
+    // append ul with lis to contentContainer
+
+
     navbar.classList.remove("homeNavbar");
 })
 
@@ -91,10 +95,12 @@ function loadPage(target, contentToLoad) {
     removeContent(target);
 
     // load content related to clicked button
-    loadContent(target, contentToLoad);
+    // loadContent(target, contentToLoad);
+    loadContent(contentToLoad);
 }
 
-function loadContent(target, contentToLoad) {
+// function loadContent(target, contentToLoad) {
+function loadContent(contentToLoad) {
     const newContent = document.createElement("div");
     newContent.setAttribute("id", "contentContainer");
     newContent.innerHTML = contentToLoad;
@@ -106,28 +112,26 @@ function removeContent(contentToRemove) {
     contentToRemove.remove();
 }
 
+function createLibrary(library) {
+    // const bookCover = "https://m.media-amazon.com/images/I/71GFfaWbcZL._SY522_.jpg";
+    // const author = "Joe";
+    // const title = "The test book";
+    // const pages = 203;
+    // const read = false;
 
-// // function appendElements(element, innerHTML) {
-// function appendElements(contentToAdd) {
-//     // element must be a string when provided!
-//     // creating container as a dump element, which will be deleted every time the removeChild function is called
-//     content.innerHTML = '<div id="content-container"></div>';
-//     const contentContainer = document.querySelector("#content-container");
+    // for each book in library create a book card
+    // title, author, cover, pages, read
+    library.forEach(book => {
+        if(book.read === true){
+            return '<li class="bookCard"><div><img class="bookCover" src='+book.cover+' alt="book cover"></div><div class="bookInfo"><div class="author-and-title"><h2>'+book.title+'</h2><h3>'+book.author+'</h3></div><div class="book-pages"><span>'+book.pages+'</span><span>pages</span></div><div><button class="delete-btn book-btn"><span class="material-symbols-outlined">delete</span></button><button class="read-btn book-btn"><span class="material-symbols-outlined">done</span></button></div></div></li>';
+        }else {
+            return '<li class="bookCard"><div><img class="bookCover" src='+book.cover+' alt="book cover"></div><div class="bookInfo"><div class="author-and-title"><h2>'+book.title+'</h2><h3>'+book.author+'</h3></div><div class="book-pages"><span>'+book.pages+'</span><span>pages</span></div><div><button class="delete-btn book-btn"><span class="material-symbols-outlined">delete</span></button><button class="read-btn book-btn"><span class="material-symbols-outlined">done</span></button></div></div></li>';
+        }
+    })
+}
 
-//     // new element to be added to the DOM
-//     contentContainer.innerHTML = contentToAdd;
-// }
-
-// function removeElements(target) {
-//     // content.removeChild(document.querySelector("#content-container"));
-//     target.removeChild(document.querySelector("#content-container"));
-// }
-
-// function changeContent(contentToAdd) {
-//     // remove all elements from content section
-//     removeElements(target);
-
-//     // append new elements to content section
-//     appendElements(contentToAdd);
-// }
-
+// on page load, load starting screen aka home screen
+window.onload = () => {
+    loadPage(contentContainer, homeScreen);
+    navbar.classList.add("homeNavbar");
+}
