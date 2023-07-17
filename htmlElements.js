@@ -30,11 +30,12 @@ const navbar = document.querySelector(".navbar");
 
 const homeBtn = document.querySelector(".homeBtn");
 const libraryBtn = document.querySelector(".libraryBtn");
-// const newBookBtn = document.querySelector(".newBookBtn");
+const addBookBtn = document.querySelector(".addBookBtn");
 
 // provided html element structure for the content section
 const homeScreen = "<div class='welcome-note'><div class='banner'></div><span>hello,</span><span>username</span><div class='horizontalDivider'></div></div>";
 const scrollBox = document.querySelector(".scroll-box");
+const addBookForm = '<form><input type="text"></input></form>';
 
 const bookBtns = document.querySelectorAll(".read-btn");
 
@@ -42,22 +43,23 @@ const bookBtns = document.querySelectorAll(".read-btn");
 
 // Event Listeners
 homeBtn.addEventListener("click", () => {
-    const contentContainer = document.querySelector("#contentContainer");
+    // const contentContainer = document.querySelector("#contentContainer");
     createContentContainer(homeScreen);
     navbar.classList.add("homeNavbar");
 })
 
 libraryBtn.addEventListener("click", () => {
-    const contentContainer = document.querySelector("#contentContainer");
+    // const contentContainer = document.querySelector("#contentContainer");
     createContentContainer(createLibrary());
     navbar.classList.remove("homeNavbar");
 })
 
 
 
-// newBookBtn.addEventListener("click", () => {
-//     changeContent(newBookForm);
-// })
+addBookBtn.addEventListener("click", () => {
+    createContentContainer(addBookForm);
+    navbar.classList.remove("homeNavbar");
+})
 
 
 
